@@ -14,15 +14,15 @@
 (define-runtime-path here-dir ".")
 (define-runtime-path tmp-dir "tmp")
 
-;(define pastebin-url "http://162.243.38.241:8000/")
-(define pastebin-url "http://pasterack.org/")
+(define pastebin-url "http://127.0.0.1:8000/")
+;(define pastebin-url "http://pasterack.org/")
 (define paste-url-base (++ pastebin-url "pastes/"))
 (define racket-docs-url "http://docs.racket-lang.org/")
 (define racket-lang-url "http://racket-lang.org")
 (define racket-logo-url "http://racket-lang.org/logo.png")
 (define racket-irc-url "https://botbot.me/freenode/racket/")
 
-(define scrbl-exe "/home/stchang/racket611/bin/scribble")
+(define scrbl-exe "/usr/bin/scribble")
 ;(define scrbl-exe "/home/stchang/racket-6.2.0.3/bin/scribble")
 
 (define PASTE-TITLE-DISPLAY-LEN 32) ; limit length of displayed title
