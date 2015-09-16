@@ -441,7 +441,9 @@
       #:headers '("Content-Type: application/x-www-form-urlencoded")))
   (define as-text? (hash-ref (read-json captcha-success-in) 'success #f))
   ;; very basic spam filter TODO: move check to client-side?
-  (if (and (not as-text?) ; probably spam
+  (if (and ;; probably spam
+           (or (not as-text?)
+               (check-ip (request-client-ip request)))
            (not (has-hashlang? paste-content)))
       (serve-home request 
                   #:title name
