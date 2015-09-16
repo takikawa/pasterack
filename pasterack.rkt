@@ -2,7 +2,8 @@
 
 (require web-server/servlet web-server/dispatch
          web-server/http/request-structs)
-(require xml xml/path net/url net/uri-codec json #;"recaptcha.rkt")
+(require xml xml/path net/url net/uri-codec json #;"recaptcha.rkt"
+         "spam.rkt")
 (require racket/system racket/runtime-path)
 (require redis data/ring-buffer)
 (require "pasterack-utils.rkt" "pasterack-parsing-utils.rkt"
