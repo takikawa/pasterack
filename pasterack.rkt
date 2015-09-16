@@ -435,7 +435,7 @@
       (string->url "https://www.google.com/recaptcha/api/siteverify")
       #:method "POST"
       #:data (alist->form-urlencoded
-               (list (cons 'secret RECAPTCHA-SECRET)
+               (list (cons 'secret 5 #;RECAPTCHA-SECRET)
                      (cons 'response captcha-token)
                      (cons 'remoteip (request-client-ip request))))
       #:headers '("Content-Type: application/x-www-form-urlencoded")))
